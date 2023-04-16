@@ -214,3 +214,35 @@ VALUES ('43014', 'Smartphone Redmi 9C 32GB/2GB Gris Wom', 'CELULARES', 'Xiaomi',
 
 -- Evaluamos tabla
 SELECT * FROM producto;
+
+-- CREACION DE NUEVOS CLIENTES 
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, Total_Pagado)
+VALUES ( '0000011', 'Claudia Pia','Lopex Lopex' , 56987454563,'las canarias 57','Petorca',' pipia@gmail.com', now(), 300.000);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro,Total_Pagado)
+VALUES ( '0000012', 'Nelson Leonr','Lillo Portillo' , 56970809090,'la granja 107','Zapallar',' lillo@gmail.com',now(), 450.000);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro,Total_Pagado)
+VALUES ( '0000013', 'Paulina Mariel','Sierra Sierra' , 5697080708,'huerfanos 3160','Quillota',' sierras@gmail.com',now(), 340.900);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
+VALUES ( '0000014', '','Ricardo Miguel' ,'Canelo Canelo', 56983121234,'la cascada 324','Quilpue',' canelox@gmail.com',now(),500.000);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
+VALUES ( '0000015', 'Luis Ariel','Zaes Zaes' , 56987887654,'avenida la luz 01','Petorca',' zaesza@gmail.com',now(), 320.900);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
+VALUES ( '0000016', ' Ariel','Sanchez Lira' , 5698788760,'las rosas 230','Llay-llay',' Liraa@gmail.com',now(), 150.900);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
+VALUES ( '0000017', 'Luisa Andrea','lopez Roa' , 56987887740,'las docas 43','Olmue',' roaaxa@gmail.com',now(), 80.900);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
+VALUES ( '0000018', 'Martina ','Navarro Zarate' , 56987884355,'matlazincas 786','Olmue',' zamartinaa@gmail.com',now(), 320.900);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
+VALUES ( '0000019', 'Hugo Antonio','Romero Morales' , 56987543454,'bromelias 43','Llay-llay',' huguito@gmail.com',now(), 20.900);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
+VALUES ( '0000020', 'Federico ','Hidalgo Zapata' , 5698774254,'montañas del sur 6743','Catemu',' fedex@gmail.com',now(), 87.900);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
+VALUES ( '0000021', 'Manuela ','Casanova Casanova' , 56976545432,'monito del monte 0943','Catemu',' novacasa@gmail.com',now(), 23.000);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
+VALUES ( '0000022', 'Lucía ','Canelo Bahamontes' , 56976764536,'achupallas 200','Catemu', 'luciaB@gmail.com',now(), 10.000);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
+VALUES ( '0000023', 'Sofía Antonia ','Careiro Cea' , 56977654343,'las ciela 544','Llay-llay', 'ceaCareiroB@gmail.com',now(), 110.000);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
+VALUES ( '0000024', 'Felipe Antonio ','Morales Canelo' , 56977694340,'las heras 4044','Olmue', 'moralesCaneloB@gmail.com',now(), 48.000);
+INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
+VALUES ( '0000025', 'Samuel Reno ',' Canelo Morales' , 56910232341,'mermelada mora 432','Olmue', 'samuRenoB@gmail.com',now(), 98.900);
