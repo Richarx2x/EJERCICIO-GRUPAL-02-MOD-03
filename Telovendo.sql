@@ -178,7 +178,6 @@ INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Prec
 VALUES ('28150', 'Unidad SSD 500GB Sata3 2.5" MX500', 'SSD', 'CRUCIAL', '27', '62000');
 INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
 VALUES ('30966', 'Unidad SSD 240GB Sata3 2.5" BX500', 'SSD', 'CRUCIAL', '36', '21000');
-
 -- CREACION DE PRODUCTOS NUEVOS RAM
 INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
 VALUES ('33918', 'DDR4 4GB 2666MHz Value RAM', 'RAM', 'CRUCIAL', '33', '22000');
@@ -190,6 +189,28 @@ INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Prec
 VALUES ('46613', 'DDR4 8GB 3600MHz Vengeance LPX', 'RAM', 'CORSAIR', '27', '42000');
 INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
 VALUES ('47666', 'DDR5 8GB 4800MHz Value RAM', 'RAM', 'CRUCIAL', '17', '48000');
+-- CREACION DE PRODUCTOS NUEVOS PARLANTES (DE SONIDO)
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('48131', 'Parlante Bose Soundlink Revolve II Plateado', 'PARLANTES', 'BOSE', '40', '213390');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('48130', 'Bose Portable Home Speaker Negro', 'PARLANTES', 'BOSE', '9', '397690');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('48336', 'Parlante Pc DHS-2101 Gamer', 'PARLANTES', 'HP', '3', '14190');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('48340', 'Parlante Pc DHS-2111 2.1 Gamer', 'PARLANTES', 'HP', '34', '7590');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('48339', 'Parlante Pc SP-HF180 2.0 USB Negro', 'PARLANTES', 'Genius', '20', '8490');
+-- CREACION DE PRODUCTOS NUEVOS CELULARES
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('47059', 'iPhone 14 Pro Max 512GB - Morado oscuro', 'CELULARES', 'Apple', '10', '1679990');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('45456', 'iPhone 13 Pro Max 1TB - Verde alpino', 'CELULARES', 'Apple', '8', '1644990');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('46882', 'Smartphone Galaxy Z Fold4 256GB/12GB 5G Beige Liberado', 'CELULARES', 'Samsung', '10', '1842990');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('47921', 'Smartphone Galaxy S23 Ultra 512GB/12GB 5G Misty Lilac', 'CELULARES', 'Samsung', '5', '1599990');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('43014', 'Smartphone Redmi 9C 32GB/2GB Gris Wom', 'CELULARES', 'Xiaomi', '18', '84990');
 
 -- Evaluamos tabla
 SELECT * FROM producto;
