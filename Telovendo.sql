@@ -29,6 +29,9 @@ CREATE TABLE vendedor (
   fecha_nacimiento DATE,
   seccion ENUM('ventas', 'marketing', 'administracion', 'jefatura') NOT NULL
 );
+-- B) Se agrega la columna Salario con un monto Default de 410.000
+ALTER TABLE vendedor
+ADD COLUMN Salario INT NOT NULL DEFAULT '410000';
 
 -- CREACIÓN DE USUARIO Y PERMISOS
 CREATE USER 'admintienda'@'localhost' IDENTIFIED BY 'admintienda';
@@ -133,6 +136,37 @@ VALUES ('1234567-9', 'Camila', 'Vergara Plaza', '1977-09-10', 'ventas')
 INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion) 
 VALUES ('22345678-9', 'Juan', 'González Pérez', '1999-05-19', 'ventas')
 ;
+-- D) 10 vendedores más agregados con la nueva columna
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('23345678-0', 'Rodrigo', 'Pérez González', '1990-06-15', 'ventas', 510000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('18458209-6', 'Ignacio', 'Morales Veas', '1992-03-17', 'jefatura', 520000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('10876543-9', 'Luis', 'González Pérez', '1990-07-22', 'administracion', 530000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('1254567-2', 'Pedro', 'Pérez Pereira', '1998-02-15', 'ventas', 643000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('22745668-1', 'Karola', 'Ortiz Vergara', '1980-05-27', 'ventas', 750000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('8778432-6', 'Jackson', 'Pérez González', '1967-05-22', 'jefatura', 890000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('8954321-2', 'Francisca', 'González González', '1967-03-10', 'marketing', 650000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('19543989-4', 'Alvara', 'Flores Guerra', '1985-12-11', 'marketing', 760000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('1234598-9', 'Camilo', 'Plaza Plaza', '1970-09-10', 'ventas', 890334)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('22545678-0', 'Ricardo', 'Plaza Pérez', '1998-05-12', 'ventas', 19540345)
+;
 
 -- TABLA CLIENTE INFO: 
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro)
@@ -156,5 +190,29 @@ VALUES ( '0000009', 'Paola Flor','Amada del Rio' , 568978564545,'calle fuego 134
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro)
 VALUES ( '0000010', 'Paolo ','Zarate Navarrete' , 56980809765,' rocas grande 230','Llay.llay',' zarate@gmail.com',now());
 
+-- G) Seleccionar los vendedores que tienen un salario superior al promedio
+SELECT nombre, apellidos, salario
+FROM vendedor
+WHERE salario > (SELECT AVG(salario) FROM vendedor);
+
+-- J) Seleccionar los vendedores que tienen un salario inferior al promedio
+SELECT nombre, apellidos, salario
+FROM vendedor
+WHERE salario < (SELECT AVG(salario) FROM vendedor);
+
+-- L) Seleccione el nombre y el apellido de los vendedores que tienen un salario superior al promedio.
+
+SELECT nombre, apellidos
+FROM vendedor
+WHERE salario > (SELECT AVG(salario) FROM vendedor);
+
+
+SELECT * FROM vendedor;
+SELECT * FROM cliente;
+SELECT * FROM producto;
+/*
+SELECT * FROM vendedor;
+
 -- Evaluamos tabla
 SELECT * FROM cliente;
+*/
