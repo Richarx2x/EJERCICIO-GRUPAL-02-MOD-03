@@ -42,14 +42,20 @@ INSERT INTO Producto (SKU, nombre, categoria, productor, cantidad_en_stock) VALU
 INSERT INTO Producto (SKU, nombre, categoria, productor, cantidad_en_stock) VALUES 
 ('P-014', 'Auriculares Inalámbricos Razer Hammerhead True Wireless Pro', 'Auriculares', 'Razer', 20),
 
+INSERT INTO Producto (SKU, nombre, categoria, productor, cantidad_en_stock) VALUES
 ('P-015', 'Auriculares Inalámbricos JLab JBuds Air Sport', 'Auriculares', 'JLab', 15),
 
+INSERT INTO Producto (SKU, nombre, categoria, productor, cantidad_en_stock) VALUES
 ('P-016', 'Auriculares con Cable Grado Labs SR80e', 'Auriculares', 'Grado Labs', 10),
 
+INSERT INTO Producto (SKU, nombre, categoria, productor, cantidad_en_stock) VALUES
 ('P-017', 'Auriculares con Cable Philips SHP9500', 'Auriculares', 'Philips', 20),
 
+INSERT INTO Producto (SKU, nombre, categoria, productor, cantidad_en_stock) VALUES
 ('P-018', 'Auriculares con Cable Beyerdynamic DT 770 Pro', 'Auriculares', 'Beyerdynamic', 30),
 
+INSERT INTO Producto (SKU, nombre, categoria, productor, cantidad_en_stock) VALUES
 ('P-019', 'Auriculares con Cable Audio-Technica ATH-AD700X', 'Auriculares', 'Audio-Technica', 12),
 
+INSERT INTO Producto (SKU, nombre, categoria, productor, cantidad_en_stock) VALUES
 ('P-020', 'Auriculares con Cable Sennheiser HD 600', 'Auriculares', 'Sennheiser', 18)
