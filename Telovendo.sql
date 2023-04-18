@@ -246,32 +246,6 @@ VALUES ('47921', 'Smartphone Galaxy S23 Ultra 512GB/12GB 5G Misty Lilac', 'CELUL
 INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
 VALUES ('43014', 'Smartphone Redmi 9C 32GB/2GB Gris Wom', 'CELULARES', 'Xiaomi', '18', '84990');
 
--- G) Seleccionar los vendedores que tienen un salario superior al promedio
-SELECT nombre, apellidos, salario
-FROM vendedor
-WHERE salario > (SELECT AVG(salario) FROM vendedor);
-
--- J) Seleccionar los vendedores que tienen un salario inferior al promedio
-SELECT nombre, apellidos, salario
-FROM vendedor
-WHERE salario < (SELECT AVG(salario) FROM vendedor);
-
--- L) Seleccione el nombre y el apellido de los vendedores que tienen un salario superior al promedio.
-
-SELECT nombre, apellidos
-FROM vendedor
-WHERE salario > (SELECT AVG(salario) FROM vendedor);
-
-
-SELECT * FROM vendedor;
-SELECT * FROM cliente;
-SELECT * FROM producto;
-/*
-SELECT * FROM vendedor;
-
--- Evaluamos tabla
-
-
 -- CREACION DE NUEVOS CLIENTES 
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, Total_Pagado)
 VALUES ( '0000011', 'Claudia Pia','Lopex Lopex' , 56987454563,'las canarias 57','Petorca',' pipia@gmail.com', now(), 300.000);
