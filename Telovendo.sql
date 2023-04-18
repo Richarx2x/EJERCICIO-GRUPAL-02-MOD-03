@@ -1,11 +1,12 @@
+-- EJERCICIO GRUPAL 01 - MÓDULO 03:
 -- CREAMOS BASE DE DATOS
--- CREATE DATABASE Telovendo;
+CREATE DATABASE Telovendo;
 
 -- EJECUTAMOS BASE DE DATOS
 USE Telovendo;
 
 -- CREAMOS TABLAS:
-/*CREATE TABLE cliente (
+CREATE TABLE cliente (
   codigo VARCHAR(20) NOT NULL UNIQUE,
   nombres VARCHAR(255) NOT NULL,
   apellidos VARCHAR(255) NOT NULL,
@@ -29,14 +30,11 @@ CREATE TABLE vendedor (
   fecha_nacimiento DATE,
   seccion ENUM('ventas', 'marketing', 'administracion', 'jefatura') NOT NULL
 );
--- B) Se agrega la columna Salario con un monto Default de 410.000
-ALTER TABLE vendedor
-ADD COLUMN Salario INT NOT NULL DEFAULT '410000';
 
 -- CREACIÓN DE USUARIO Y PERMISOS
 CREATE USER 'admintienda'@'localhost' IDENTIFIED BY 'admintienda';
 GRANT ALL PRIVILEGES ON Telovendo.* TO 'admintienda'@'localhost';
-*/
+
 -- TABLA PRODUCTOS INFO: 
 -- IMPRESORAS
 INSERT INTO Producto (SKU, nombre, categoria, productor, cantidad_en_stock) 
@@ -136,37 +134,6 @@ VALUES ('1234567-9', 'Camila', 'Vergara Plaza', '1977-09-10', 'ventas')
 INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion) 
 VALUES ('22345678-9', 'Juan', 'González Pérez', '1999-05-19', 'ventas')
 ;
--- D) 10 vendedores más agregados con la nueva columna
-INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
-VALUES ('23345678-0', 'Rodrigo', 'Pérez González', '1990-06-15', 'ventas', 510000)
-;
-INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
-VALUES ('18458209-6', 'Ignacio', 'Morales Veas', '1992-03-17', 'jefatura', 520000)
-;
-INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
-VALUES ('10876543-9', 'Luis', 'González Pérez', '1990-07-22', 'administracion', 530000)
-;
-INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
-VALUES ('1254567-2', 'Pedro', 'Pérez Pereira', '1998-02-15', 'ventas', 643000)
-;
-INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
-VALUES ('22745668-1', 'Karola', 'Ortiz Vergara', '1980-05-27', 'ventas', 750000)
-;
-INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
-VALUES ('8778432-6', 'Jackson', 'Pérez González', '1967-05-22', 'jefatura', 890000)
-;
-INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
-VALUES ('8954321-2', 'Francisca', 'González González', '1967-03-10', 'marketing', 650000)
-;
-INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
-VALUES ('19543989-4', 'Alvara', 'Flores Guerra', '1985-12-11', 'marketing', 760000)
-;
-INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
-VALUES ('1234598-9', 'Camilo', 'Plaza Plaza', '1970-09-10', 'ventas', 890334)
-;
-INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
-VALUES ('22545678-0', 'Ricardo', 'Plaza Pérez', '1998-05-12', 'ventas', 19540345)
-;
 
 -- TABLA CLIENTE INFO: 
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro)
@@ -189,8 +156,14 @@ INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, c
 VALUES ( '0000009', 'Paola Flor','Amada del Rio' , 568978564545,'calle fuego 1343','Olmue',' delRio@gmail.com',now());
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro)
 VALUES ( '0000010', 'Paolo ','Zarate Navarrete' , 56980809765,' rocas grande 230','Llay.llay',' zarate@gmail.com',now());
--- RAMA SIMON IMPORTANTE SUBIR PRIMERO YA QUE AGREGA LAS COLUMNAS NUEVAS
 
+-- RAMA SIMON IMPORTANTE SUBIR PRIMERO YA QUE AGREGA LAS COLUMNAS NUEVAS
+-- EJERCICIO GRUPAL 02 - MÓDULO 03:
+
+-- A) B) C)
+-- Se agrega la columna Total_Pagado con un monto Default de 0
+-- Se agrega la columna Salario con un monto Default de 410.000
+-- Se agrega la columna Precio con un monto Default de 10.000
 -- CREACION DE COLUMNAS NUEVAS
 ALTER TABLE cliente
 ADD COLUMN Total_Pagado INT NOT NULL DEFAULT '0';
@@ -201,6 +174,7 @@ ADD COLUMN Salario INT NOT NULL DEFAULT '410000';
 ALTER TABLE Producto
 ADD COLUMN Precio INT NOT NULL DEFAULT '10000';
 
+-- C) CREACION DE NUEVOS PRODUCTOS
 -- CREACION DE PRODUCTOS NUEVOS SSD
 INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
 VALUES ('45565', 'Unidad SSD 500GB Sata3 2.5" CS900', 'SSD', 'PNY', '12', '42000');
@@ -246,7 +220,39 @@ VALUES ('47921', 'Smartphone Galaxy S23 Ultra 512GB/12GB 5G Misty Lilac', 'CELUL
 INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
 VALUES ('43014', 'Smartphone Redmi 9C 32GB/2GB Gris Wom', 'CELULARES', 'Xiaomi', '18', '84990');
 
--- CREACION DE NUEVOS CLIENTES 
+-- D) 10 vendedores más agregados con la nueva columna
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('23345678-0', 'Rodrigo', 'Pérez González', '1990-06-15', 'ventas', 510000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('18458209-6', 'Ignacio', 'Morales Veas', '1992-03-17', 'jefatura', 520000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('10876543-9', 'Luis', 'González Pérez', '1990-07-22', 'administracion', 530000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('1254567-2', 'Pedro', 'Pérez Pereira', '1998-02-15', 'ventas', 643000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('22745668-1', 'Karola', 'Ortiz Vergara', '1980-05-27', 'ventas', 750000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('8778432-6', 'Jackson', 'Pérez González', '1967-05-22', 'jefatura', 890000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('8954321-2', 'Francisca', 'González González', '1967-03-10', 'marketing', 650000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('19543989-4', 'Alvara', 'Flores Guerra', '1985-12-11', 'marketing', 760000)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('1234598-9', 'Camilo', 'Plaza Plaza', '1970-09-10', 'ventas', 890334)
+;
+INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
+VALUES ('22545678-0', 'Ricardo', 'Plaza Pérez', '1998-05-12', 'ventas', 19540345)
+;
+
+-- E) CREACION DE NUEVOS CLIENTES 
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, Total_Pagado)
 VALUES ( '0000011', 'Claudia Pia','Lopex Lopex' , 56987454563,'las canarias 57','Petorca',' pipia@gmail.com', now(), 300.000);
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro,Total_Pagado)
@@ -278,3 +284,5 @@ VALUES ( '0000024', 'Felipe Antonio ','Morales Canelo' , 56977694340,'las heras 
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
 VALUES ( '0000025', 'Samuel Reno ',' Canelo Morales' , 56910232341,'mermelada mora 432','Olmue', 'samuRenoB@gmail.com',now(), 98.900);
 
+-- Revisamos Tablas
+-- SELECT count(*) FROM vendedor;
