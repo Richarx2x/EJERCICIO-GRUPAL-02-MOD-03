@@ -1,11 +1,11 @@
 -- CREAMOS BASE DE DATOS
-CREATE DATABASE Telovendo;
+-- CREATE DATABASE Telovendo;
 
 -- EJECUTAMOS BASE DE DATOS
 USE Telovendo;
 
 -- CREAMOS TABLAS:
-CREATE TABLE cliente (
+/*CREATE TABLE cliente (
   codigo VARCHAR(20) NOT NULL UNIQUE,
   nombres VARCHAR(255) NOT NULL,
   apellidos VARCHAR(255) NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE vendedor (
 -- CREACIÓN DE USUARIO Y PERMISOS
 CREATE USER 'admintienda'@'localhost' IDENTIFIED BY 'admintienda';
 GRANT ALL PRIVILEGES ON Telovendo.* TO 'admintienda'@'localhost';
-
+*/
 -- TABLA PRODUCTOS INFO: 
 -- IMPRESORAS
 INSERT INTO Producto (SKU, nombre, categoria, productor, cantidad_en_stock) 
@@ -223,7 +223,7 @@ VALUES ( '0000012', 'Nelson Leonr','Lillo Portillo' , 56970809090,'la granja 107
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro,Total_Pagado)
 VALUES ( '0000013', 'Paulina Mariel','Sierra Sierra' , 5697080708,'huerfanos 3160','Quillota',' sierras@gmail.com',now(), 340.900);
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
-VALUES ( '0000014', '','Ricardo Miguel' ,'Canelo Canelo', 56983121234,'la cascada 324','Quilpue',' canelox@gmail.com',now(),500.000);
+VALUES ( '0000014','Ricardo Miguel' ,'Canelo Canelo', 56983121234,'la cascada 324','Quilpue',' canelox@gmail.com',now(),500.000);
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
 VALUES ( '0000015', 'Luis Ariel','Zaes Zaes' , 56987887654,'avenida la luz 01','Petorca',' zaesza@gmail.com',now(), 320.900);
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
@@ -246,3 +246,4 @@ INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, c
 VALUES ( '0000024', 'Felipe Antonio ','Morales Canelo' , 56977694340,'las heras 4044','Olmue', 'moralesCaneloB@gmail.com',now(), 48.000);
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
 VALUES ( '0000025', 'Samuel Reno ',' Canelo Morales' , 56910232341,'mermelada mora 432','Olmue', 'samuRenoB@gmail.com',now(), 98.900);
+
