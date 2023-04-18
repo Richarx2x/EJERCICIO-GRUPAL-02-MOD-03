@@ -174,52 +174,6 @@ ADD COLUMN Salario INT NOT NULL DEFAULT '410000';
 ALTER TABLE Producto
 ADD COLUMN Precio INT NOT NULL DEFAULT '10000';
 
--- C) CREACION DE NUEVOS PRODUCTOS
--- CREACION DE PRODUCTOS NUEVOS SSD
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('45565', 'Unidad SSD 500GB Sata3 2.5" CS900', 'SSD', 'PNY', '12', '42000');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('27163', 'Unidad SSD 480GB Sata3 2.5" A400" CS900', 'SSD', 'KINGSTON', '14', '32000');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('27162', 'Unidad SSD 240GB Sata3 2.5" A400" CS900', 'SSD', 'KINGSTON', '11', '22000');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('28150', 'Unidad SSD 500GB Sata3 2.5" MX500', 'SSD', 'CRUCIAL', '27', '62000');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('30966', 'Unidad SSD 240GB Sata3 2.5" BX500', 'SSD', 'CRUCIAL', '36', '21000');
--- CREACION DE PRODUCTOS NUEVOS RAM
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('33918', 'DDR4 4GB 2666MHz Value RAM', 'RAM', 'CRUCIAL', '33', '22000');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('43964', 'DDR4 8GB 2666MHz Beast', 'RAM', 'KINGSTON', '28', '30000');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('37117', 'DDR4 8GB 2666MHz Vengeance LPX', 'RAM', 'CORSAIR', '10', '31000');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('46613', 'DDR4 8GB 3600MHz Vengeance LPX', 'RAM', 'CORSAIR', '27', '42000');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('47666', 'DDR5 8GB 4800MHz Value RAM', 'RAM', 'CRUCIAL', '17', '48000');
--- CREACION DE PRODUCTOS NUEVOS PARLANTES (DE SONIDO)
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('48131', 'Parlante Bose Soundlink Revolve II Plateado', 'PARLANTES', 'BOSE', '40', '213390');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('48130', 'Bose Portable Home Speaker Negro', 'PARLANTES', 'BOSE', '9', '397690');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('48336', 'Parlante Pc DHS-2101 Gamer', 'PARLANTES', 'HP', '3', '14190');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('48340', 'Parlante Pc DHS-2111 2.1 Gamer', 'PARLANTES', 'HP', '34', '7590');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('48339', 'Parlante Pc SP-HF180 2.0 USB Negro', 'PARLANTES', 'Genius', '20', '8490');
--- CREACION DE PRODUCTOS NUEVOS CELULARES
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('47059', 'iPhone 14 Pro Max 512GB - Morado oscuro', 'CELULARES', 'Apple', '10', '1679990');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('45456', 'iPhone 13 Pro Max 1TB - Verde alpino', 'CELULARES', 'Apple', '8', '1644990');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('46882', 'Smartphone Galaxy Z Fold4 256GB/12GB 5G Beige Liberado', 'CELULARES', 'Samsung', '10', '1842990');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('47921', 'Smartphone Galaxy S23 Ultra 512GB/12GB 5G Misty Lilac', 'CELULARES', 'Samsung', '5', '1599990');
-INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
-VALUES ('43014', 'Smartphone Redmi 9C 32GB/2GB Gris Wom', 'CELULARES', 'Xiaomi', '18', '84990');
-
 -- D) 10 vendedores más agregados con la nueva columna
 INSERT INTO Vendedor (run, nombre, apellidos, fecha_nacimiento, seccion, salario) 
 VALUES ('23345678-0', 'Rodrigo', 'Pérez González', '1990-06-15', 'ventas', 510000)
@@ -284,5 +238,52 @@ VALUES ( '0000024', 'Felipe Antonio ','Morales Canelo' , 56977694340,'las heras 
 INSERT INTO cliente ( codigo, nombres, apellidos, telefono, direccion, comuna, correo_electronico, fecha_registro, total_pagado)
 VALUES ( '0000025', 'Samuel Reno ',' Canelo Morales' , 56910232341,'mermelada mora 432','Olmue', 'samuRenoB@gmail.com',now(), 98.900);
 
+-- F) CREACION DE NUEVOS PRODUCTOS
+-- CREACION DE PRODUCTOS NUEVOS SSD
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('45565', 'Unidad SSD 500GB Sata3 2.5" CS900', 'SSD', 'PNY', '12', '42000');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('27163', 'Unidad SSD 480GB Sata3 2.5" A400" CS900', 'SSD', 'KINGSTON', '14', '32000');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('27162', 'Unidad SSD 240GB Sata3 2.5" A400" CS900', 'SSD', 'KINGSTON', '11', '22000');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('28150', 'Unidad SSD 500GB Sata3 2.5" MX500', 'SSD', 'CRUCIAL', '27', '62000');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('30966', 'Unidad SSD 240GB Sata3 2.5" BX500', 'SSD', 'CRUCIAL', '36', '21000');
+-- CREACION DE PRODUCTOS NUEVOS RAM
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('33918', 'DDR4 4GB 2666MHz Value RAM', 'RAM', 'CRUCIAL', '33', '22000');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('43964', 'DDR4 8GB 2666MHz Beast', 'RAM', 'KINGSTON', '28', '30000');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('37117', 'DDR4 8GB 2666MHz Vengeance LPX', 'RAM', 'CORSAIR', '10', '31000');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('46613', 'DDR4 8GB 3600MHz Vengeance LPX', 'RAM', 'CORSAIR', '27', '42000');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('47666', 'DDR5 8GB 4800MHz Value RAM', 'RAM', 'CRUCIAL', '17', '48000');
+-- CREACION DE PRODUCTOS NUEVOS PARLANTES (DE SONIDO)
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('48131', 'Parlante Bose Soundlink Revolve II Plateado', 'PARLANTES', 'BOSE', '40', '213390');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('48130', 'Bose Portable Home Speaker Negro', 'PARLANTES', 'BOSE', '9', '397690');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('48336', 'Parlante Pc DHS-2101 Gamer', 'PARLANTES', 'HP', '3', '14190');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('48340', 'Parlante Pc DHS-2111 2.1 Gamer', 'PARLANTES', 'HP', '34', '7590');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('48339', 'Parlante Pc SP-HF180 2.0 USB Negro', 'PARLANTES', 'Genius', '20', '8490');
+-- CREACION DE PRODUCTOS NUEVOS CELULARES
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('47059', 'iPhone 14 Pro Max 512GB - Morado oscuro', 'CELULARES', 'Apple', '10', '1679990');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('45456', 'iPhone 13 Pro Max 1TB - Verde alpino', 'CELULARES', 'Apple', '8', '1644990');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('46882', 'Smartphone Galaxy Z Fold4 256GB/12GB 5G Beige Liberado', 'CELULARES', 'Samsung', '10', '1842990');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('47921', 'Smartphone Galaxy S23 Ultra 512GB/12GB 5G Misty Lilac', 'CELULARES', 'Samsung', '5', '1599990');
+INSERT INTO producto (SKU, nombre, categoria, productor, cantidad_en_stock, Precio) 
+VALUES ('43014', 'Smartphone Redmi 9C 32GB/2GB Gris Wom', 'CELULARES', 'Xiaomi', '18', '84990');
+
 -- Revisamos Tablas
--- SELECT count(*) FROM vendedor;
+-- SELECT * FROM producto;
+

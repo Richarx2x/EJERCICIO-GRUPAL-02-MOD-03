@@ -5,3 +5,8 @@ INTEGRANTES:
 - ARACILY MORALES
 - MAURICIO MORALES
 - ALVARO STUARDO
+
+NOTAS: Ejercicio principal se encuentra en archivo Telovendo.sql
+
+ENLACE REPOSITORIO DE TRABAJO EN GITHUB:
+https://github.com/Richarx2x/EJERCICIO-GRUPAL-02-MOD-03.git
